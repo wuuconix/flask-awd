@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+
+  service:
+    build: .
+    image: wuuconix/flask-awd
+    ports:
+      - "10002:80"
+      - "10022:22"
+    environment:
+      - FLAG=flag{flag_test}

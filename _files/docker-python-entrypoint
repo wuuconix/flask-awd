@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [[ -f /flag.sh ]]; then
+	source /flag.sh
+fi
+
+nohup python3 /app/app.py & #nohup挂起python进程
+
+service ssh start #开启ssh服务
+
+echo "Running..."
+
+tail -F /dev/null
